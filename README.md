@@ -7,7 +7,7 @@
 从零开始使用 VS Code + MicroPico 插件开发 ESP8266（ESP-12F）的教程。
 
 > 📚 **[查看完整github仓库](https://github.com/igotyuandme320/esp8266-micropython-guide-njupt/tree/master)**
- 📮 **邮箱：itzyylc@outlook.com **
+> 📮 邮箱：itzyylc@outlook.com 
 
 ---
 
@@ -103,7 +103,7 @@ MicroPython v1.20.0 on 2023-04-26; ESP module with ESP8266
 Type "help()" for more information or .help for custom vREPL commands.
 >>> 
 ```
-  看到有     >>>     的    REPL    交互框即成功
+  看到有        REPL    交互框即成功
 
 ### 2. 编程与测试
 
@@ -120,11 +120,6 @@ Run current file on Pico   #运行文件
 ---
 
 
----
-
-
-
----
 
 ## 💡 示例代码
 

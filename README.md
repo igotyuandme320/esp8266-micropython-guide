@@ -93,7 +93,7 @@ esptool.py --port <PORT> --baud 460800 write_flash --flash_size=detect 0 firmwar
 **示例：**
 ```bash
 esptool.py --port /dev/tty.usbserial-110 --baud 460800 write_flash --flash_size=detect 0 esp8266-20240105-v1.22.1.bin
-
+```
 
 看到 `Hash of data verified.` 表示刷入成功！
 

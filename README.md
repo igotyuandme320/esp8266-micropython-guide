@@ -74,7 +74,7 @@ pip install esptool
 ### 2. 确认串口号
 
 ```bash
-ls /dev/tty.*
+ls /dev/tty.*    #大概率为tty.usbserial-10
 
 ```
 
@@ -102,47 +102,35 @@ esptool.py --port /dev/tty.usbserial-110 --baud 460800 write_flash --flash_size=
 ## ⚙️ VS Code 配置
 
 ### 1. 连接开发板
-as
-1. 断开 GPIO0 和 GND 的连接（运行模式）
-2. 重新插拔 USB
-3. VS Code 左下角会显示 **"Pico Disconnected"**
-4. 点击 → 选择你的串口 → 等待连接
-5. 显示 **"Pico Connected"** 绿色状态即成功
 
-### 2. 打开 REPL
+1. 打开vscode
+2. 插入 USB
+3. 按快捷键 ``` **command + shift + p **```
+4. 在输入框中输入
+```bash
+   MicroPico: Connect
+```
+5. terminal显示类似
+```bash
+MicroPython v1.20.0 on 2023-04-26; ESP module with ESP8266
+Type "help()" for more information or .help for custom vREPL commands.
+>>> 
+```
+  看到有  ** >>> **  的 ** REPL ** 交互框即成功
 
-- 按 `Ctrl+Shift+P`
-- 输入 **"MicroPico: Open REPL"**
-- 看到 `>>>` 提示符即可开始交互
+### 2. 编程与测试
 
-### 3. 常用快捷键
-
-| 操作 | 快捷键 |
-|------|--------|
-| 上传当前文件 | `Ctrl+Shift+P` → Upload current file |
-| 上传项目 | `Ctrl+Shift+P` → Upload project |
-| 打开 REPL | `Ctrl+Shift+P` → Open REPL |
-| 软复位 | REPL 中按 `Ctrl+D` |
-
+1.点击左上角文件图标的EXPLORER
+2.选择文件夹创建项目
+3.新建 **.py** 文件，编写代码
+4.按command + s 保存文件
+5.右键文件选择
+```bash
+Upload file to Pico        #载入文件
+Run current file on Pico   #运行文件                   
+```
 ---
 
-## 📁 项目结构
-
-```
-esp8266-micropython-guide/
-├── README.md              # 本文件
-├── main.py               # 主程序入口
-├── boot.py               # 启动配置（网络、初始化）
-├── config.py             # 配置文件（WiFi 密码等）
-├── lib/                  # 第三方库
-│   └── ...
-├── examples/             # 示例代码
-│   ├── 01_blink.py      # LED 闪烁
-│   ├── 02_wifi.py       # WiFi 连接
-│   ├── 03_webrepl.py    # WebREPL 配置
-│   └── 04_http_server.py # HTTP 服务器
-└── .gitignore           # Git 忽略文件
-```
 
 ---
 

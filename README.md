@@ -71,7 +71,7 @@ ls /dev/tty.*    #大概率为/dev/tty.usbserial-10
 
 ```bash
 # 擦除 Flash（重要！）
-esptool.py --port <PORT> erase_flash
+esptool --port <PORT> erase_flash
 
 # 刷入固件（替换 firmware.bin 为实际文件名）
 esptool --port <PORT> --baud 460800 write_flash --flash_size=detect 0 firmware.bin

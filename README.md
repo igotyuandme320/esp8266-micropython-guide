@@ -61,7 +61,7 @@ pip install esptool
 ### 2. 确认串口号
 
 ```bash
-ls /dev/tty.*    #大概率为tty.usbserial-10
+ls /dev/tty.*    #大概率为/dev/tty.usbserial-10
 
 ```
 
@@ -74,12 +74,12 @@ ls /dev/tty.*    #大概率为tty.usbserial-10
 esptool.py --port <PORT> erase_flash
 
 # 刷入固件（替换 firmware.bin 为实际文件名）
-esptool.py --port <PORT> --baud 460800 write_flash --flash_size=detect 0 firmware.bin
+esptool --port <PORT> --baud 460800 write_flash --flash_size=detect 0 firmware.bin
 ```
 
 **示例：**
 ```bash
-esptool.py --port /dev/tty.usbserial-110 --baud 460800 write_flash --flash_size=detect 0 esp8266-20240105-v1.22.1.bin
+esptool --port /dev/tty.usbserial-110 --baud 460800 write_flash --flash_size=detect 0 esp8266-20240105-v1.22.1.bin
 ```
 
 看到 `Hash of data verified.` 表示刷入成功！
